@@ -1,12 +1,15 @@
-Generator VCard dla pracowników PŁ.
+Wywołanie:
+localhost:8080/
+localhost:8080/search?name
+localhost:8080/download/{fullName}
 
-Sposób użycia:
-Po uruchomieniu servera i wejściu na http://localhost:8080/ wyświetli się okienko do wpisania imienia i nazwiska żądanego pracownika PŁ.
-Naciśnięcie przycisku "Search" wygeneruje listę znalezionych pracowników, 
-obok każdego z nich wyświetli się przycisk "Wygeneruj VCard", 
-którego kliknięcie spowoduje rozpoczęcie pobierania pliku vcf o nazwie wybranego pracownika.
+Opis:
+Po uruchomieniu servera i wywołaniu localhost:8080/ zostanie wyświetlone okienko do wpisania szukanego ciągu znaków z imienia bądź nazwiska pracownika PŁ. 
+"Search" wygeneruje listę znalezionych pracowników. 
+"Wygeneruj VCard" przy wybranym pracowniku spowoduje rozpoczęcie pobierania pliku vcf o nazwie wybranego pracownika.
 
-METODA			ŻADANIE			ODPOWIEDŹ
-GET			/			Wyświetla stronę z formularzem i przyciskiem SEARCH
-GET			/search?name		Wyświetla listę pracowników PŁ podanych w parametrze name
-GET			/download/{fullName}	Generuje VCard pracownika dla imienia i nazwiska podanego jako parametr
+
+METODA			ŻADANIE						ODPOWIEDŹ
+GET				/							Wyświetla stronę z formularzem i przyciskiem SEARCH
+GET				/search?name				Wyświetla listę pracowników PŁ podanych w parametrze name
+GET				/download/{fullName}		Generuje VCard pracownika dla imienia i nazwiska podanego jako parametr
